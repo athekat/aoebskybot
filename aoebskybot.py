@@ -84,7 +84,7 @@ def check_player_statuses_and_post_changes(players):
                     # Convert UTC to Buenos Aires time
                     utc_dt = datetime.fromisoformat(finished_raw.replace('Z', '+00:00')).replace(tzinfo=pytz.utc)
                     buenos_aires_dt = utc_dt.astimezone(BUENOS_AIRES_TZ)
-                    finished_info = buenos_aires_dt.strftime("%H:%M (%Y\-%m\-%d)")
+                    finished_info = buenos_aires_dt.strftime("%H:%M (%Y-%m-%d)")
                 else:
                     outcome = "is playing now."
                     finished_info = "" # Match is ongoing, no finished time
